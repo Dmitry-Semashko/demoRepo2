@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+  godel.helloworld:
+    image: ${DOCKER_REGISTRY-}godelhelloworld
+    build:
+      context: .
+      dockerfile: Godel.HelloWorld/Dockerfile

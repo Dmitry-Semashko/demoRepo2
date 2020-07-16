@@ -1,0 +1,22 @@
+{
+    "chrome": {
+        "default": "75.0",
+        "versions": {
+            "75.0": {
+                "image": "selenoid/chrome:75.0",
+                "port": "4444",
+                "path": ""
+            }
+        }
+    },
+    "firefox": {
+        "default": "68.0",
+        "versions": {
+            "68.0": {
+                "image": "selenoid/firefox:68.0",
+                "port": "4444",
+                "path": ""
+            }
+        }
+    }
+}

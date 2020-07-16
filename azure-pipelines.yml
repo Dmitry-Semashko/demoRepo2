@@ -1,0 +1,27 @@
+variables:
+  - name: major
+    value: 1
+  - name: minor
+    value: 0
+  - name: System.debug
+    value: true
+
+trigger:
+  branches:
+    include:
+    - master
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: Resources
+
+name: $(BuildDefinitionName).$(major).$(minor)$(Rev:.r)
+
+stages:
+  - template: build.yaml@templates
+
+  - template: build_push_docker.yaml@templates
+
+  # - template: deploy_test.yaml@templates
