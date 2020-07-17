@@ -3,6 +3,6 @@
     public class Response
     {
         //public string Setting { get; set; }
-        public string Action { get; set; }
+        public string Actio { get; set; }
     }
 }
